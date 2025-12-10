@@ -48,6 +48,10 @@ export default function App() {
     setBoard(Array(9).fill(null));
     setIsXNext(true);
   };
+  const resetScores = () => {
+    setScoreX(0);
+    setScoreO(0);
+  };
 
   return (
     <div className="text-center mt-6">
@@ -75,6 +79,12 @@ export default function App() {
         className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded"
       >
         Rejouer
+      </button>
+      <button
+        onClick={resetScores}
+        className="mt-3 bg-red-500 hover:bg-red-700 text-white font-bold px-4 py-2 rounded"
+      >
+        Reset Score
       </button>
     </div>
   );
